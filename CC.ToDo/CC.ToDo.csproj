@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <UserSecretsId>aspnet-CC.ToDo-2A3B369A-D1D8-47AB-A35C-0A7811E0CD4F</UserSecretsId>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\node_modules\todomvc-app-css\index.css" />
+    <Content Include="wwwroot\node_modules\todomvc-common\base.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\node_modules\angular-resource\angular-resource.js" />
+    <None Include="wwwroot\node_modules\angular-route\angular-route.js" />
+    <None Include="wwwroot\node_modules\angular\angular.js" />
+    <None Include="wwwroot\node_modules\todomvc-common\base.js" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Update="app.db" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="litedb" Version="4.1.4" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CC.ToDo.Data.LiteDB\CC.ToDo.Data.LiteDB.csproj" />
+    <ProjectReference Include="..\CC.ToDo.Domain\CC.ToDo.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
